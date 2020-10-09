@@ -1,0 +1,12 @@
+<body style="margin:0">
+    <div id="container"></div>
+    <script type="module">
+        import {HelloWorld, sayHelloWorld, message} from "./scripts/hello_js_modules/hello_module.js";
+        let helloClass = new HelloWorld();
+        [helloClass.message, helloClass.sayHello(), sayHelloWorld(), message].forEach(value => {
+            let div = document.createElement("div");
+            div.appendChild(document.createTextNode(`${value} from a module`));
+            container.appendChild(div);
+        });
+    </script>
+</body>
